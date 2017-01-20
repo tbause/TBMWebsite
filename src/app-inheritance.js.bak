@@ -1,0 +1,22 @@
+class Vehicle {
+    constructor(licNum) {
+        this._licNum = licNum;
+    }
+
+    get licNum()      { return this._licNum; }
+    set licNum(value) { this._licNum = value; }
+}
+
+class Drone extends Vehicle {
+
+}
+
+class Car extends Vehicle {
+    constructor(licNum) {
+        super(licNum);
+    }
+}
+
+let c = new Car('A123');
+
+console.log(c.licNum);

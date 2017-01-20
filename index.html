@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>www.bausemason.net</title>
-		<link rel="stylesheet" href="style.css">
+        <title>Testapp</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.css">
+        
+        <script src="node_modules/traceur/bin/traceur.js"></script>
+        <script src="node_modules/systemjs/dist/system.js"></script>
+        <script src="node_modules/material-design-lite/dist/material.js"></script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXakTF8Qhkpma_VNMlu3up4waMKZaWDDU&callback=googleMapsCallback"></script>
     </head>
     <body>
-		
-		<div id="container">
-			<div id="content" class="clearfix">
-				<center><h3>Under Development</h3></center>
-			</div>
-			<div id="header">
-				<center><h1>Bause Mason Website</h1></center>
-			</div>
-		</div>		
-		<center><h5>2017-01-18</h5></center>
+        <script>
+            function googleMapsCallback(){
+                System.paths["jquery"] = "./node_modules/jquery/dist/jquery.js";
+                System.import("src/app.js");
+            }
+        </script>
     </body>
 </html>

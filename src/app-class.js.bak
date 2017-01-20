@@ -1,0 +1,24 @@
+class Drone {
+    constructor(id, name) {
+        this._id = id;
+        this._name = name;
+    }
+
+    get id() { return this._id; }
+    set id(value) { this._id = value; }
+
+    get name() { return this._name; }
+    set name(value) { this._name = value; }
+
+    fly() {
+        console.log("Drone " + this._id + " is flying");
+    }
+}
+
+let drone = new Drone("A123", "Flyer");
+let drone2 = new Drone("B456", "Twirl");
+
+console.log("Drone 1: " + drone.id + " " + drone.name);
+console.log("Drone 2: " + drone2.id + " " + drone2.name);
+
+drone.fly();
