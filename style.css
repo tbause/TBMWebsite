@@ -1,0 +1,22 @@
+div#container {
+	width: 800px;
+	height: 600px;
+	margin: 0px auto;
+	background: #FFFFFF;
+	padding: 0px;
+}
+
+div#content {
+	width: 800px;
+	height: 500px;
+	padding-top: 100px;
+	background: #F0F0F0;
+}
+
+div#header {
+	width: 800px;
+	height: 100px;
+	background: lightgray;
+	position: absolute;
+	top: 0px;
+}
