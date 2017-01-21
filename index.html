@@ -9,14 +9,11 @@
         <script src="node_modules/systemjs/dist/system.js"></script>
         <script src="node_modules/material-design-lite/dist/material.js"></script>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXakTF8Qhkpma_VNMlu3up4waMKZaWDDU&callback=googleMapsCallback"></script>
     </head>
     <body>
         <script>
-            function googleMapsCallback(){
-                System.paths["jquery"] = "./node_modules/jquery/dist/jquery.js";
-                System.import("src/app.js");
-            }
+            System.paths["jquery"] = "./node_modules/jquery/dist/jquery.js";
+            System.import("src/app.js");
         </script>
     </body>
 </html>
