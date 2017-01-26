@@ -1,0 +1,23 @@
+{
+  "name": "tbmwebsite",
+  "version": "1.0.0",
+  "description": "test website for bausemason.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbause/TBMWebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbause/TBMWebsite/issues"
+  },
+  "homepage": "https://github.com/tbause/TBMWebsite#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
