@@ -1,94 +1,416 @@
 <!DOCTYPE html>
-<html>
-    <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>www.bausemason.net</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/cerulean-bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-		<div id="page">
-			<header class="container">
-				<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">BauseMason.net</a>
-					</div>
+    <title>BauseMason.net</title>
 
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">About</a></li>
-						<li class="dropdown">
-						<a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Resources <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Whitepapers</a></li>
-							<li><a href="#">References</a></li>
-							<li><a href="#">Links</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-						</li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-						<input class="form-control" type="text" placeholder="Search">
-						</div>
-						<button class="btn btn-default" type="submit">Submit</button>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Contact</a></li>
-					</ul>
-					</div>
-				</div>
-				</nav>
-			</header>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
 
-			<section id="body" class="container">
-					<p>
-						<center><h3>Under Construction</h3></center>
-					</p>
+    <meta name="description" content="">
 
-				<section id="main" class="col-md-8 col-sm-10">
-					<p>
-						<center><h3></h3></center>
-					</p>
+    <!-- CSS -->
+    <link href="assets/css/preload.css" rel="stylesheet">
 
-					<p>
-					</p>
-				</section>
-				<section id="sidebar" class="col-md-4 col-sm-2">
-					<p>
-						<center><h3></h3></center>
-					</p>
+    <link href="assets/css/vendors.css" rel="stylesheet">
+    <link href="assets/css/syntaxhighlighter/shCore.css" rel="stylesheet" >
 
-					<p>
-					</p>
-				</section>
-			</section>
-			<footer class="container">
-				&copy; Thomas Bause Mason, 2017
-			</footer>
-		</div>
+    <link href="assets/css/style-blue.css" rel="stylesheet" title="default">
+    <link href="assets/css/width-full.css" rel="stylesheet" title="default">
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="node_modules/jquery/dist/jquery.js"></script>
-    
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    </body>
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<body>
+
+<div class="sb-site-container">
+<div class="boxed">
+
+<header id="header-full-top" class="hidden-xs header-full">
+    <div class="container">
+        <div class="header-full-title">
+            <h1 class="animated fadeInRight"><a href="index.html"><span>Open Media</span> Consulting, LLC</a></h1>
+            <p class="animated fadeInRight">Professional Media Consulting Services</p> <!-- Media Consulting Services -->
+        </div>
+        <nav class="top-nav">
+
+            <div class="dropdown animated fadeInDown animation-delay-11">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login</a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter">
+                    <form role="form">
+                        <h4>Login Form</h4>
+
+                        <div class="form-group">
+                            <div class="input-group login-input">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+                            <br>
+                            <div class="input-group login-input">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="checkbox pull-left">
+                                  <input type="checkbox" id="checkbox_remember1">
+                                  <label for="checkbox_remember1">
+                                     Remember me
+                                  </label>
+                            </div>
+                            <button type="submit" class="btn btn-ar btn-primary pull-right">Login</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- dropdown -->
+
+            <div class="dropdown animated fadeInDown animation-delay-13">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-search-box animated fadeInUp">
+                    <form role="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-ar btn-primary" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </form>
+                </div>
+            </div> <!-- dropdown -->
+        </nav>
+    </div> <!-- container -->
+</header> <!-- header-full -->
+
+<nav class="navbar navbar-default navbar-header-full yamm navbar-static-top" role="navigation" id="header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+            <a id="ar-brand" class="navbar-brand hidden-lg hidden-md hidden-sm" href="index.html">Bause<span>Mason.net</span></a>
+        </div> <!-- navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="pull-right">
+            <a href="javascript:void(0);" class="sb-icon-navbar sb-toggle-right"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Home</a>
+                     <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#tbm-anchor1">What do we do</a></li>
+                        <li><a href="#tbm-anchor2">Recent Works</a></li>
+                        <li><a href="#tbm-anchor3">About us</a></li>
+                        <li><a href="#tbm-anchor4">Our Team</a></li>
+                        <li><a href="#tbm-anchor5">Our Clients</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </div><!-- navbar-collapse -->
+    </div><!-- container -->
+</nav>
+
+<section class="wrap-hero margin-bottom">
+    <div id="carousel-example-ny" class="carousel carousel-hero slide" data-ride="carousel" data-interval="9000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-ny" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-ny" data-slide-to="1"></li>
+            <li data-target="#carousel-example-ny" data-slide-to="2"></li>
+            <li data-target="#carousel-example-ny" data-slide-to="3"></li>
+            <li data-target="#carousel-example-ny" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-6">
+                            <div class="">
+                                <img src="assets/img/new/Handshake1.png" alt="" class="img-responsive animated zoomInUp animation-delay-30">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <div class="carousel-caption">
+                               <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Seasoned <span>int'l Expert </span>in media technology</h1>
+                               <ul class="list-unstyled carousel-list">
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-11"></i><span class="animated fadeInRightBig animation-delay-13">Over <strong>20 Years of Experience</strong> in media technology.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-15"></i><span class="animated fadeInRightBig animation-delay-16">Recognized <strong>Industry Expert</strong> in int'l industry organizations.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-19"></i><span class="animated fadeInRightBig animation-delay-19">Strong background in <strong>Digital Media Engineering</strong>.</span></li>
+                               </ul>
+                               <p class="animated zoomIn animation-delay-20">Reliable and knowledgeable <span>Media Professional</span> with experience spanning the full gamut from production to distribution.</p>
+							   <!-- <div class="action-zone">
+								   <a href="#" class="btn btn-ar btn-transparent-opaque btn-xl animated fadeInUp animation-delay-25"><i class="fa fa-search"></i> Know More</a>
+							   </div> -->
+                            </div>
+                        </div>
+                    </div> <!--row -->
+                </div> <!-- container -->
+            </div> <!-- item -->
+
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-6">
+                            <div class="">
+                                <img src="assets/img/new/multiscreen3.png" alt="" class="img-responsive animated zoomInUp animation-delay-30">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <div class="carousel-caption">
+                               <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">We help with <span>Multi-Screen</span> distribution!</h1>
+                               <ul class="list-unstyled carousel-list">
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-11"></i><span class="animated fadeInRightBig animation-delay-13">Effective encoding for <strong>Adaptive Bit Rate Streaming.</strong></span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-15"></i><span class="animated fadeInRightBig animation-delay-16">Ensure the <strong>Best Quality</strong> for streaming media.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-19"></i><span class="animated fadeInRightBig animation-delay-19">Distribute everything <strong>Securely</strong> and <strong>Measureable</strong>.</span></li>
+                               </ul>
+                               <p class="animated zoomIn animation-delay-20">Online media distribution to all available platforms is a fast growing <span>revenue stream</span> for media comapnies.</p>
+							   <!-- <div class="action-zone">
+								   <a href="#" class="btn btn-ar btn-transparent-opaque btn-xl animated fadeInUp animation-delay-25"><i class="fa fa-search"></i> Know More</a>
+							   </div> -->
+                            </div>
+                        </div>
+                    </div> <!--row -->
+                </div> <!-- container -->
+            </div> <!-- item -->
+
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-6">
+                            <div class="">
+                                <img src="assets/img/new/HDR1.png" class="img-responsive animated zoomInUp animation-delay-30" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <div class="carousel-caption">
+                               <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Need to implement <span>New Media Formats</span>?</h1>
+                               <ul class="list-unstyled carousel-list">
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-11"></i><span class="animated fadeInRightBig animation-delay-13">Life like images thru <strong>HDR</strong> and <strong>WCG</strong>.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-15"></i><span class="animated fadeInRightBig animation-delay-16">More details with <strong>High Resolution</strong> and <strong>High Frame Rates.</strong></span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-19"></i><span class="animated fadeInRightBig animation-delay-19"><strong>Immersive Audio</strong> for better listening.</span></li>
+                               </ul>
+                               <p class="animated zoomIn animation-delay-20">The evolution to next generation image and audio formats is underway and <span>we can help</span> in your transistion.</p>
+                               <!-- <div class="action-zone">
+                                   <a href="#" class="btn btn-ar btn-transparent-opaque btn-xl animated fadeInUp animation-delay-25"><i class="fa fa-search"></i> Know More</a>
+                               </div> -->
+                            </div>
+                        </div>
+                    </div> <!--row -->
+                </div> <!-- container -->
+            </div> <!-- item -->
+
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-6">
+                            <div class="">
+                                <img src="assets/img/new/cloud2.png" alt="" class="img-responsive animated zoomInRight animation-delay-30">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <div class="carousel-caption">
+                               <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Want to move to <span>Cloud Infrastructure</span>?</h1>
+                               <ul class="list-unstyled carousel-list">
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-11"></i><span class="animated fadeInRightBig animation-delay-13"><strong>Virtualize</strong> your next equipment room.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-15"></i><span class="animated fadeInRightBig animation-delay-16">Connect through <strong>IP Networks</strong> to converge services.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-19"></i><span class="animated fadeInRightBig animation-delay-19">Make the move to the <strong>Cloud</strong> painless</span></li>
+                               </ul>
+                               <p class="animated zoomIn animation-delay-20">IP infrastructure with commodity hardware and software online application enable a <span>Virtualized, Cloud Based</span> future.</p>
+                               <!-- <div class="action-zone">
+                                   <a href="#" class="btn btn-ar btn-transparent-opaque btn-xl animated fadeInUp animation-delay-25"><i class="fa fa-search"></i> Know More</a>
+                               </div> -->
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- item -->
+
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-6">
+                            <div class="">
+                                <img src="assets/img/new/vrheadset.png" alt="" class="img-responsive animated zoomInRight animation-delay-30">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6">
+                            <div class="carousel-caption">
+                               <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Prepare for a future with <span>Virtual Reality</span></h1>
+                               <ul class="list-unstyled carousel-list">
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-11"></i><span class="animated fadeInRightBig animation-delay-13">VR <strong>Production Workflow</strong> glass to glass.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-15"></i><span class="animated fadeInRightBig animation-delay-16">Gain inside into VR <strong>Equipment Diversity</strong>.</span></li>
+                                   <li class=""><i class="fa fa-angle-right animated fadeIn animation-delay-19"></i><span class="animated fadeInRightBig animation-delay-19">Ensure excellent <strong>VR Content Quality</strong></span></li>
+                               </ul>
+                               <p class="animated zoomIn animation-delay-20">Virtual, augmented and mixed reality are just emerging but it is important to understand its <span>Business Implications</span> early on.</p>
+                               <!-- <div class="action-zone">
+                                   <a href="#" class="btn btn-ar btn-transparent-opaque btn-xl animated fadeInUp animation-delay-25"><i class="fa fa-search"></i> Know More</a>
+                               </div> -->
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- item -->
+
+        </div> <!-- carousel-inner -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-ny" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-ny" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</section> <!-- carousel -->
+
+<section class="section-lines">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 padding-40">
+                <p class="slogan text-center no-margin">This site is <span>under development</span>. We will follow up with <span>updates</span> to the sections below soon.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="tbm-anchor1" class="container">
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="right-line">What do we do?</h2>
+            </div>
+        </div> <!-- row -->
+    </section>
+</div> <!-- container -->
+
+<div id="tbm-anchor2" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="right-line">Recents Works</h2>
+        </div>
+    </div>
+</div>
+
+<div id="tbm-anchor3" class="container margin-bottom">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="right-line no-margin-bottom">About Us</h2>
+        </div>
+    </div>
+</div> <!-- container -->
+
+<div id="tbm-anchor3" class="container margin-bottom">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="right-line no-margin-bottom">Our Team</h2>
+        </div>
+    </div>
+</div> <!-- container -->
+
+
+<aside id="footer-widgets">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="footer-widget-title">Sitemap</h3>
+                <ul class="list-unstyled three_cols">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio_topvar.html">Works</a></li>
+                    <li><a href="page_about2.html">About Us</a></li>
+                    <li><a href="page_team.html">Our Team</a></li>
+                    <li><a href="page_services.html">Services</a></li>
+                    <li><a href="page_login_full.html">Login</a></li>
+                    <li><a href="page_contact.html">Contact</a></li>
+                </ul>
+                <h3 class="footer-widget-title">Subscribe</h3>
+                <p>Subscribe to our new feed to stay up-to-date with what we do.</p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Adress">
+                    <span class="input-group-btn">
+                        <button class="btn btn-ar btn-primary" type="button">Subscribe</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+            <div class="col-md-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Recent Post</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Recent Works</h3>
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</aside> <!-- footer-widgets -->
+<footer id="footer">
+    <p>&copy; 2017 <a href="#">Open Media Consulting</a>, LLC. All rights reserved.</p>
+</footer>
+
+</div> <!-- boxed -->
+</div> <!-- sb-site -->
+
+<div class="sb-slidebar sb-right sb-style-overlay">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+        </span>
+    </div><!-- /input-group -->
+
+    <h2 class="slidebar-header no-margin-bottom">Navigation</h2>
+    <ul class="slidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page_about3.html">About us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="page_contact.html">Contact</a></li>
+    </ul>
+
+    <h2 class="slidebar-header">Social Media</h2>
+    <div class="slidebar-social-icons">
+        <a href="#" class="social-icon-ar rss"><i class="fa fa-rss"></i></a>
+        <a href="#" class="social-icon-ar facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-icon-ar twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-icon-ar pinterest"><i class="fa fa-pinterest"></i></a>
+        <a href="#" class="social-icon-ar instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="social-icon-ar wordpress"><i class="fa fa-wordpress"></i></a>
+        <a href="#" class="social-icon-ar linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="social-icon-ar flickr"><i class="fa fa-flickr"></i></a>
+        <a href="#" class="social-icon-ar vine"><i class="fa fa-vine"></i></a>
+        <a href="#" class="social-icon-ar dribbble"><i class="fa fa-dribbble"></i></a>
+    </div>
+</div> <!-- sb-slidebar sb-right -->
+<div id="back-top">
+    <a href="#header"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+<script src="assets/js/vendors.js"></script>
+
+<!-- Syntaxhighlighter -->
+<script src="assets/js/syntaxhighlighter/shCore.js"></script>
+<script src="assets/js/syntaxhighlighter/shBrushXml.js"></script>
+<script src="assets/js/syntaxhighlighter/shBrushJScript.js"></script>
+
+<script src="assets/js/DropdownHover.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/home_info.js"></script>
+</body>
+
 </html>
