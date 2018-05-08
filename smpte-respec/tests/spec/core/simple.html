@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'/>
+<title>Simple Spec</title>
+<script class='remove'>
+  const script = document.createElement("script");
+  script.dataset.main = "/js/profile-w3c-common";
+  script.classList.add("remove");
+  script.src = window.__karma__ ?
+      "/builds/respec-w3c-common.js"
+    : "/js/deps/require.js";
+  document.head.appendChild(script);
+</script>
+<script class='remove'>
+var respecConfig = {
+  specStatus: "ED",
+  shortName: "basics",
+  editors: [{ name: "Robin Berjon", url: "http://berjon.com/" }],
+  wg: "ReSpec Hackin' Gang",
+  wgURI: "https://darobin.github.com/respec",
+  wgPublicList: "none",
+  wgPatentURI: "https://XXX",
+  edDraftURI: "https://darobin.github.com/respec",
+};
+</script>
+<section id='abstract'>
+  <p>Basic doc</p>
+</section>
+<section id='sotd'>
+  <p>
+    CUSTOM PARAGRAPH
+  </p>
+</section>
+<section>
+  <h2>Some title</h2>
+  <p>
+    Some content
+  </p>
+  <p><dfn id="custom_id(¡™£¢∞§¶•ªº)">custom id</dfn></p>
+  <p><dfn>[[\escapedSlot]]</dfn> <a>[[\escapedSlot]]</a></p>
+</section>
+<section data-dfn-for="Test">
+  <h2><dfn>Test</dfn> interface</h2>
+  <pre class="idl">
+    interface Test {
+      void foo();
+    };
+  </pre>
+  <section>
+    <h3><dfn>foo()</dfn> method</h3>
+  </section>
+</section>

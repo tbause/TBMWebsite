@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>Engineering Documents</title>
+  <script src='../js/deps/require.js' data-main='../js/profile-smpte-common' async="" class='remove'></script>
+</script>
+  <script class='remove'>
+var respecConfig = {
+        docStatus: "WD",
+        docType: "AG",
+        docRoot: "02",
+        revisionOf: "AG 05:2013",
+        managingGroup: "ST"
+      };
+  </script>
+  <style type="text/css">
+table.syntax { border: 0px solid black; width: 85%; border-collapse: collapse }
+  table.syntax caption { font-weight: bold; text-align: left; padding-bottom: 0.5em }
+  table.syntax th { border: 0px solid black; text-align: left }
+  table.syntax td { border: 0px solid black }
+  table.syntax div { background-color: #ffffc8 }
+  div.exampleInner { background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em }
+  ul.short-list { margin: 0; padding-left: 0; list-style-position: inside;}
+  .note {font-size:small}
+  .equation {text-indent: 10%;}
+  .example {font-size: small}
+  .inline-note {font-size: small}
+  </style>
+</head>
+
+<body>
+
+  <section id='scope'>
+    <h2>Scope</h2>
+
+    <p>This Administrative Guideline defines the numbering format for SMPTE Engineering
+	    Documents and specifies the permitted file formats used during document development
+    	and publication. It also specifies other matters relating to SMPTE Engineering
+	    Documents with regard to language, style, format, document type, markups required
+	    at various stages of development, etc.</p>
+
+	<p>Files that show the differences between two versions of the same document are
+		called &ldquo;markups&ldquo; in this Administrative Guideline. "Markup" is intended to cover
+		a variety of terms including: &ldquo;redline,&ldquo; 
+		&ldquo;tracked changes,&ldquo; &ldquo;blackline,&ldquo; etc...</p>
+  </section>
+
+  <section id='language'>
+  	<h2>Language</h2>
+    <p>All SMPTE Engineering documents shall be written in U.S. English. Translations
+    	into other languages by SMPTE (or by 3rd parties authorized by SMPTE) are
+    	encouraged but not required. In the event of discrepancy, the original English
+    	language document shall be authoritative.</p>
+  </section>
+
+  <section id='style-and-form'>
+    <h2>Style and Form</h2>
+
+    <section id='style-guidelines'>
+      <h3>Style Guidelines</h3>
+
+	<p>All Engineering Documents should follow the guidelines of the International Organization
+		for Standardization (ISO) Directives with the following exceptions: In the event of a
+		conflict, explicit provisions of SMPTE Operations Manuals and Administrative Guidelines
+		shall prevail. Any variances from the ISO Directives shall be approved by the Director
+		of Engineering or the Standards Vice President.</p>
+
+	 <p>Particular attention should be given to the following annexes of the ISO
+	 	Directives, Part 2:
+	 	<ul>
+			<li>Annex B, Basic reference works</li>
+			<li>Annex C, Example of numbering of divisions and subdivisions</li>
+			<li>Annex D, Drafting and presentation of terms and definitions</li>
+			<li>Annex E, Drafting of the title of a document</li>
+		</ul>
+	</p>
+	<p>
+	   The ISO Directives are available at: <a href="http://www.iso.org/directives.">
+	   ISO Directives</a></p>
+    </section>
+
+    <section id='smpte-templates'>
+      <h3>SMPTE Templates</h3>
+
+      <p>All new Engineering Documents shall use the appropriate, approved SMPTE template.
+	    (See Administrative Guideline AG-04 Engineering Document Templates:
+	    <a href="https://kws.smpte.org/higherlogic/ws/groups/stds_comm/documents/administra1652/document?document_id=39213">
+	    	AG-04-01</a> and
+	    <a href="https://kws.smpte.org/higherlogic/ws/groups/stds_comm/documents/administra1652/document?document_id=39214">
+	    	AG-04-02</a>
+      	This will ensure proper revision management through and including final
+      	publication. Document templates can be found in the Standards Community document
+      	repository:  <a href= "https://kws.smpte.org/higherlogic/ws/groups/stds_comm/documents">
+      		SC Documents</a>.</p>
+    </section>
+
+    <section id="revisions-and-amendments">
+      <h3>Revisions and Amendments</h3>
+		<p>A revision of an Engineering Document may use the original template if the
+			resulting prose is identical to that resulting from use of the current
+			template and the Standards Vice President or Director of Engineering agree
+			to the use of the original publication template.</p>
+			
+		<p>For a revision of an Engineering Document, the Project Group should start
+			with the Publication Master, which usually can be obtained from SMPTE HQ.
+			The Project Group may, at its discretion, recreate the original document,
+			as published, if an editable master cannot be found. The Project Group is
+			encouraged to follow the ISO Directives but is under no obligation to do
+			so.</p>
+			
+		<p>An Amendment shall use the current template.</p>
+    </section>
+  </section>
+
+  <section id="publication-formats-and-elements">
+	<h2>Publication Formats and Elements</h2>
+	<section id="publication-formats-overview">
+	  <h3>Publication Formats Overview</h3>
+      <p>SMPTE Engineering Documents may be published on paper or in various electronic
+      formats and may comprise one or more separate elements. An Engineering Document
+      always shall include a single prose element and may include other elements such as
+      XML, spreadsheets, media files, and so forth. The collection of elements,
+      regardless of formats employed, is the "Engineering Document" as a whole, and
+      all elements shall be clearly identified in the prose element
+      (see <a href="#elements"></a>). Any change to any element constitutes a change to
+      the Engineering Document. The Project Group and the Technology Committee shall
+      determine the number of elements for publication. The Director of Engineering
+      shall determine the distribution media for all published documents. The format of
+      publication shall alter neither the relevance of, nor the processes that otherwise
+      are required for approval of, an Engineering Document.</p>
+      
+	<p>Engineering Document Elements may be packaged as one or more Elements using
+		ZIP to facilitate the organization and distribution of the component files.</p>
+    </section>
+    <section id="file-formats-for-document-submission">
+	    <h3>File Formats for Document Submission</h3>
+	    <p>Engineering Documents and other contributed documents shall be submitted to
+	    a Technology Committee or its subgroups in a limited set of file formats.
+	    The following formats are approved:
+		<dl>
+			<dt>Prose and Embedded Tables: .doc .docx</dt>
+			<dd>Engineering Documents should use Office 2007 formats (.docx) for Prose
+				and tabular documents. Engineering Documents may use Office 2003
+				formats (.doc) as needed. The Project Group shall determine which format
+				to use on a project- by-project basis. Conversions between Office 2003
+				and Office 2007 formats are not perfect. To minimize the risk of
+				unintended artifacts, conversion between formats is not required.</dd>
+
+			<dt>Adobe Acrobat Format</dt>
+			<dd>Adobe Acrobat files may be contributed but shall be accompanied by editable
+				files for all the elements in the document (prose, tables, drawings, etc.) to
+				permit further revision.</dd>
+
+			<dt>Microsof Excel Spreadsheet: .xls or .xlsx</dt>
+			<dd>The Project Group shall decide which spreadsheet format (.xls or .xlsx) to use for
+				each project. The preferred format is .xlsx.</dd>
+
+			<dt>XML</dt>
+			<dd>
+				<p>Any document conforming to W3C Extensible Markup Language (XML) 1.0
+					(Fifth Edition) or W3C Extensible Markup Language (XML) 1.1
+					(Second Edition) may be submitted.</p>
+				
+				<p>The namespaces of all normative XML elements used in XML documents
+					shall have a corresponding normative reference in the prose.</p>
+					
+				<p>The file extension shall be ".xml", unless otherwise specified by
+					the defining specification of the document or by an appropriate IANA
+					media type registration.</p>
+
+				<p>Documents conforming to the following XML-based specifications are
+					specifically allowed:
+					<ul>
+						<li>W3C XML Schema Part 1: Structures Second Edition
+							(file extension: .xsd)</li>
+						<li>W3C Web Services Description Language (WSDL) 1.1</li>
+						<li>XML Metadata Interchange (XMI), any Formally Released
+							Version (http://www.omg.org/spec/XMI/)Drawings: .vsd,
+							vsdx, .dwg and .emf</li>
+					</ul>
+				</p>
+			</dd>
+
+			<dt>Images</dt>
+			<dd>For new projects .jpg, .jpeg, .png, .tif and .tiff are approved image
+			formats.  Revisions of existing documents may continue to use .bmp.</dd>
+
+			<dt>Media files</dt>
+			<dd>Any audio, video or image media format documented by SMPTE, whether in an
+				Engineering Document or an RDD, or any other media format that is commonly
+				used, widely available, and appropriate for the user community for which
+				the Engineering Document has been created.</dd>
+
+			<dt>Other non-prose elements</dt>
+			<dd>.txt and program source formats</dd>
+		</dl>
+	</section>
+
+    <section id='smpte-hq-guidance'>
+      <h3>SMPTE HQ Guidance</h3>
+
+      <p>The Director of Engineering shall store and process documents in the format
+      		chosen by a Project Group and/or Technology Committee. The Director of
+	      	Engineering shall ensure that copies of the editable source documents are
+	      	maintained for all published Engineering Documents. The editable publication
+	      	master should be made available by the Director of Engineering when a
+	      	Revision or Amendment project is started.</p>
+    </section>
+  </section>
+  <section id='normative-language-forms'>
+	<h2>Normative Language Forms</h3>
+	<p>Normative information in a SMPTE Engineering Document may take the language form
+	of prose, tables, figures, formal languages (e.g., mathematical formulae, BNF, XML,
+	pseudo code), and other language forms. Mathematical formulae shall follow the
+	definitions documented in ISO 80000-2 when possible. When ISO 80000-2 is not
+	sufficient (e.g., BNF, XML Schema, etc.), a Normative Reference for the mathematical
+	definitions used shall be provided. Such Normative Reference shall comply with the
+	provisions of the SMPTE Standards Operations Manual and AG-03 Normative References.</p>
+
+	<p>When language forms other than prose are present, the prose shall state whether the
+	language is normative or informative. Normative provisions shall be enabled
+	explicitly (e.g., "The dimensions of figure 1 shall be used."). The presence of
+	non-prose information without prose conformance language shall be deemed
+	informative.</p>
+  </section>
+
+  <section id='dates'>
+    <h2>Dates</h2>
+
+    <p>In accordance with ISO 8601-2004, all dates shall be represented in the form
+   		YYYY- MM-DD as numeric digits (e.g. 2009-04-23 to indicate April 23, 2009).</p>
+  </section>
+  
+  <section id='document-numbering'>
+	<h2>Document Numbering</h2>
+	<section id='document-numbering-overview'>
+		<h3>Document Numbering Overview</h3>
+		<p>Document numbers shall be unique and uniform across all Engineering Document
+			types. Versions of documents shall be identified by their year of publication
+			and, optionally, their month of publication, appended with a separating colon
+			(e.g., for document #1020: 1020:2009 or 1020:2009-04, the latter indicating
+			publication in April, 2009). Figure 1 shows an example of the document numbering
+			structure.<p>
+		
+		<p>The Director of Engineering shall assign document numbers (or root document
+			numbers, in the case of multipart documents). Document numbers may be
+			assigned at the request of the Technology Committee Chair(s) at any time
+			after a Project is approved and shall be assigned before a Final Committee
+			Draft ballot is issued.</p>
+			
+		<p>Older Engineering Documents may bear one-, two-, or three-digit document
+			numbers or root document numbers. These numbers shall not be prepended
+			with leading zeroes when formatted for printing, either in the document
+			itself or in citations in other documents. Such document numbers shall be
+			prepended with leading zeroes to fill them out to four digits, however, when
+			used as part of an element’s filename; the purpose is to facilitate sorting
+			into numerical order.</p>
+
+		<figure id='example-document-number'>
+		  <img src="figures/example-document-number.png" alt="Example Document Number">
+		  
+		  <figcaption>
+		  	Example Document Number
+		  </figcaption>
+		</figure>
+	</section>
+	<section id='engineering-document-type'>
+		<h3>Engineering Document Type</h3>
+		<p>The Type of Engineering Document (Standard, Recommended Practice or
+			Engineering Guideline) shall be denoted by prepending a Type Designator,
+			followed by a single space, to the document’s root number. The Type
+			Designator shall be as follows:
+			<dl>
+				<dt>ST</dt> <dd>Standard</dd>
+				<dt>RP</dt> <dd>Recommended Practice</dd>
+				<dt>EG</dt> <dd>Engineering Guideline</dd>
+			</dl>
+		</p>
+
+		<p>Although they are not Engineering Documents, Registered Disclosure Documents,
+			Advisory Notes, Administrative Guidelines, and Engineering Reports shall bear
+			Type Designators as follows:
+			<dl>
+				<dt>RDD</dt> <dd>Registered Disclosure Document</dd>
+				<dt>AN</dt> <dd>Advisory Note</dd>
+				<dt>AG</dt> <dd>Administrative Guideline</dd>
+				<dt>ER</dt> <dd>Engineering Report</dd>
+				<dt>OV</dt> <dd>Overview Document (Part 0 Document)</dd>
+			</dl>
+		</p>
+		<p>RDDs and ERs shall be numbered using independent number spaces. The numbers
+			shall be assigned by SMPTE Headquarters staff.</p>
+	</section>
+	<section id='parts'>
+		<h3>Parts</h3>
+		<p>Closely related Engineering Documents may be created as Parts. A Part of a
+			document is a separate Engineering Document and shall be shown to be related to
+			other documents by using the same root document number plus a suffix of a hyphen
+			and the Part number to distinguish among Parts (e.g. 1020-2:2009, indicating
+			document 1020, Part 2).</p>
+
+		<section id='parts-of-different-types'>
+			<h4>Parts of Different Types</h4>
+			<p>A multipart set of documents may include Parts of different types of
+				Engineering Documents, including Standards, Recommended Practices, and
+				Engineering Guidelines. Each Part’s number shall include the appropriate
+				document type designation (e. g. RP 2046-2:2009).</p>
+		</section>
+		
+		<section id='part-0-documents'>
+			<h4>Part 0 Documents</h4>
+			<p>A multipart set of documents should be supplemented by an informative
+				Part 0, informally described as an “Overview Document,” which shall
+				describe the relationships among the Parts and may describe the
+				relationships of the Parts to other Engineering Documents. Part 0
+				documents are not due process Engineering Documents.</p>
+				
+			<p>Part 0 documents usually should be prepared by the authors of the related
+				engineering documents in cooperation with SMPTE headquarters staff and
+				the responsible Technology Committee and Project Group. Part 0 documents
+				shall be maintained by the Director of Engineering in consultation with
+				the Technology Committee Chair(s) and the author(s) of the Part 0
+				document. If new Parts are added to a multipart set, or if any of the
+				Parts of the set are revised, Part 0 shall be revised at the same time.
+				The Part 0 designation shall not be used for any Engineering Document.
+				Part 0 documents shall not bear a Type designator
+				(i.e. it is not an ST, RP or EG).</p>
+				
+			<p>A Part 0 document should not contain forward-looking statements in regard
+				to documents that are not ready for publication.</p>
+				
+			<p>As a general guideline, Part 0 documents should use the following
+				structure:
+				<ol>
+					<li>an overview of the general application of the related engineering
+						documents, in a language that can be understood by non-experts</li>
+					<li>an overview of the scope of various related documents, with
+					graphical representations, if appropriate</li>
+					<li>an overview of the contextual relationships of various
+						engineering documents</li>
+				</ol>
+			</p>
+			<p>Examples of Part 0 documents: SMPTE 2052-0 or SMPTE 425-0.</p>
+		</section>
+		
+		<section id='normative-referecnes-to-multipart-documents'>
+			<h4>Normative References to Multipart Documents</h4>
+			<p>Normative references to multipart documents always shall specify the
+				individual Part or Parts being referenced and shall not reference the
+				entire set by root number alone.</p>
+		</section>
+	</section>
+		
+	<section id='elements'>
+		<h3>Elements</h3>
+		<p>Non-prose Elements of Engineering Documents (see Section 4 Publication Formats
+			and Elements) shall be designated using a lower case letter (e.g. 1020a:2009
+			and 1020b:2009). Media such as DVDs, as well as non-PDF formats, shall be
+			clearly marked, as appropriate. The single prose element shall not receive a
+			letter suffix.</p>
+	</section>
+	
+	<section id='number-space'>
+		<h3>Number Space</h3>
+		<p>All new Engineering Documents shall share a common root number space,
+			starting with 2000, except for new Parts of multipart documents that
+			have a one-, two- or three-digit root.</p>
+
+		<p>In the past, each type of Engineering Document had its own number space.
+			This presented difficulties when a Technology Committee determined that the
+			document type had to be changed (for example, changing a Recommended Practice
+			to a Standard) if the number in the new number space already was in use. To
+			address this going forward, the block of numbers from 1000 to 1999 has been
+			allocated.</p>
+
+		<p>If a Technology Committee determines that the classification of an Engineering
+			Document with a one-, two- or three-digit root must be changed (e.g., from a
+			Recommended Practice to a Standard) and there already is an Engineering
+			Document with that number, the document whose classification is being
+			changed shall have 1000 added to its root. For example, if the Technology
+			Committee were to determine that Recommended Practice RP 222 should be
+			changed to a Standard, its number would be changed to SMPTE ST 1222 because
+			there already is a SMPTE ST 222.</p>
+			
+		<p>Each of the other published document types (i.e., Registered Disclosure
+			Documents, Advisory Notes, Administrative Guidelines, and Engineering
+			Reports) shall have its own number space independent of Engineering Documents
+			and of each other. They otherwise shall follow the rules for document
+			numbering specified in this Administrative Guideline.</p>
+	</section>
+  </section>
+			
+  <section id='work-in-process-file-naming-conventions'>
+    <h2>Work In Process File Naming Conventions</h2>
+    
+    <section id='due-process-engineering-documemts'>
+    	<h3>Due Process Engineering Documents</h3>
+
+    <p>File names for due process Engineering Documents should be constructed as follows.</p>
+	<code>&lt;group&gt; &ldquo;-&ldquo; &lt;state&gt; &ldquo;-&ldquo; &lt;type&gt; &ldquo;-&ldquo; &lt;number&gt; [ &ldquo;-&ldquo; &lt;part&gt; ] [ &lt;element&gt; ] &ldquo;-&ldquo; &lt;description&gt; &ldquo;-&ldquo; &lt;date&gt; [ &ldquo;(&ldquo; &lt;note&gt; &ldquo;)&rdquo; ] &ldquo;.&rdquo; &lt;extension&gt;</code>
+    
+    <p>Where:
+    	<dl>
+			<dt>&lt;group&gt;</dt>
+			<dd>is the Group that authored the document (e.g., TC name, &ldquo;31FS&rdquo;)</dd>
+			
+			<dt>&lt;state&gt;</dt>
+			<dd>is &ldquo;WD&rdquo; | &ldquo;CD&rdquo; | &ldquo;FCD&rdquo; | &ldquo;DP&rdquo;</dd>
+			<dt>&lt;type&gt;</dt>
+			<dd>is &ldquo;ST&rdquo; | &ldquo;RP&rdquo; | &ldquo;EG&rdquo; | &ldquo;RDD&rdquo; | &ldquo;AN&rdquo; | &ldquo;ER&rdquo; | &ldquo;OV&rdquo; | &ldquo;AG&rdquo;
+				(See <a href="#enginering-document-type"></a>)</dd>
+			<dt>&lt;number&gt;</dt>
+			<dd>is the SMPTE HQ staff-assigned document number<dd>
+			<dt>&lt;part&gt;</dt>
+			<dd>is the optional part number<dd>
+			<dt>&lt;element&gt;</dt>
+			<dd>is the optional element letter<dd>
+			<dt>&lt;description&gt;</dt>
+			<dd>is a brief indicator of subject, such as an abbreviated
+				name of the document, which is constructed using only alpha characters,
+				digits and "-". The description is a required element of the file name.</dd>
+			<dt>&lt;date&gt;</dt>
+			<dd>is the document version date, formatted
+				(&ldquo;YYYY-MM-DD&rdquo;) as defined in <a href="#dates"></a>.</dd>
+			<dt>&lt;note&gt;</dt>
+				<dd>is an optional string that can be used to annotate the file
+				contents, e.g., &ldquo;(clean),&rdquo; &ldquo;(markup),&rdquo; &ldquo;
+				(package),&rdquo; or similar information. The &lt;note&gt; shall be
+				constructed using only alpha characters, digits, &ldquo;-&ldquo;.</dd>
+			<dt>&lt;extension&gt;</dt>
+			<dd>is an approved extension. See section 4.2 File Formats
+				for Document Submission<dd>
+		</dl>
+	</p>
+	
+	<div class='note'>
+	<p>The &lt;description&gt; and &lt;note&gt; fields can use CamelCase or hyphens as word
+		separators. The Document Editor and Project Chair need to consider both choices
+		and make a decision based on the project name, any acronyms used, the length of
+		the name and related factors.</p>
+	</div>
+	</section>
+
+	<section id='elements-that-are-one-file'>
+		<h3>Elements That Are One File</h3>
+		<p>The Project Group should follow the recommendation in this section or the
+			requirements in section 7 Document Numbering. The final publication name
+			shall be assigned by the Director of Engineering.</p>
+	</section>
+	
+	<section id='elements-that-are-a-collection-of-many-files'>
+		<h3>Elements That Are a Collection of Many Files</h3>
+		<p>Elements that are a collection of files shall be aggregated into a single
+			file that is a .zip file. The .zip file may contain other .zip files if
+			necessary. The file name for the .zip file shall follow the rules outlined
+			in <a href="#elements-that-are-one-file"></a>. The names of the files in the .zip file
+			shall be at the discretion of the Project Group. The Project Group may use
+			the schemes defined in this AG. They should use a scheme that is appropriate
+			for the files in the element.</p>
+	</section>
+
+	<section id='file-names-for-contributions'>
+		<h3>File Names for Contributions</h3>
+		<p>File names for contributions that are not Engineering Documents shall be at
+			the discretion of the individual or group making the contribution. The scheme
+			in <a href="#due-process-engineering-documents"></a> should be considered as a useful
+			model. If these rules are used, the &lt;state&gt; should be &ldquo;C.&ldquo;</p>
+			
+		<p>For a new project, the document number and even the project short name may not
+			be known. In this event, individuals making the contributions should use
+			their judgment when naming files.</p>
+	</section>
+  </section>
+  <section id='document-packages'>
+    <h2>Document Packages</h2>
+
+	<section id='document-packages-overview'>
+		<h3>Document Packages Overview</h3>
+		<p>Various document packages are needed during the development process. In all
+			cases, a document being reviewed or voted upon shall be the current draft
+			which is the “clean” version.<p>
+			
+		<p>In the event that any of the following is in conflict with the SMPTE Standards
+			Operations Manual, the Operations Manual shall prevail.</p>
+	</section>
+	
+	<section id='working-draft-development'>
+		<h3>Working Draft Development</h3>
+		<p><a href="#style-and-form"></a> of this AG has guidance for the use of templates for new
+			projects, Revisions and Amendments.<p>
+			
+		<p>For Revisions the process of converting an old document into the current
+			template changes section numbering and alters the appearance of the original
+			document, even though the content of the document has not changed. In this
+			case, it is recommended that the conversion to the current template should be
+			made before any other changes are made. The document editor should
+			&ldquo;accept all changes&ldquo; to create a clean starting point
+			(the &ldquo;baseline draft&ldquo;) from which to track the technical and/or
+			editorial revisions to the document.</p>
+			
+		<p>During Working Draft development (an informal process), a Project Group may
+			provide intermediate draft documents and markups for review within the
+			Project Group. Intermediate document packages may include an informal
+			Comment Resolution Record or a Comment Resolution Document.</p>
+			
+		<p>The state of these draft documents shall be &ldquo;WD.&ldquo; Project Groups
+			should follow the <a href="#due-process-engineering-documents"></a> given in this Administrative
+			Guideline for file names.</p>
+	</section>
+	
+	<section id='pre-ballot-review-document-package'>
+		<h3>Pre-Ballot Review Document Package</h3>
+		<p>The first step in the formal document process is the preparation of a Working
+			Draft, which shall be marked as &ldquo;WD.&ldquo; This document a package is
+			provided by the Project Group to the Technology Committee Chair(s). This
+			review is optional; See the Standards Operations Manual for guidance.</p>
+			
+		<p>The document package shall contain a clean draft. In addition it may contain
+			one of the following:
+			<ul>
+				<li>For new documents, no original work exists, so a markup is not
+					meaningful.</li>
+				<li>For a Revision, the Project group should provide a markup from the
+					published document (the baseline draft) in the template to be used
+					for the revision project.</li>
+				<li>For an Amendment, the formal document is the list of changes to be
+					made to the published document. A markup from the published document
+					may be provided at the Project Group’s discretion.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section id='final-committee-draft-ballot-document-package'>
+		<h3>Final Committee Draft Ballot Document Package</h3>
+		<p>Following Pre-Ballot Review, a Project Group should address all comments.
+			See the comment resolution process in the Standards Operations Manual. When
+			the Project Group agrees that the document is ready for ballot, it shall
+			provide a Committee Draft ballot package marked as &ldquo;CD&ldquo; to the
+			Technology Committee Chairs(s) that contains:
+			<ul>
+				<li>A clean version of the Committee Draft document marked as
+					&ldquo;CD.&ldquo;</li>
+				<li>For a new Engineering Document, a markup from the Pre-Ballot Review
+					draft should be included if any changes have been made.</li>
+				<li>For a Revision, a markup from the baseline draft should be
+					included.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+			</ul>
+		</p>
+		<p> When additional Final Committee Draft Ballot(s) are required, the Project
+			Group shall submit a package to the Technology Committee Chair(s) that
+			contains the following:
+			<ul>
+				<li>A clean version of the Committee Draft document marked as
+					&ldquo;CD.&ldquo;</li>
+				<li>A markup from the previous ballot may be included.</li>
+				<li>For a Revision, a markup from the baseline draft should be
+					included.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>A Comment Resolution Record is required. This should be the
+					electronic comment resolution records kept on the SMPTE web site.
+					In some situations the Project Group may wish to keep other records.
+					See the Standards Operations Manual for guidance.</li>
+			</ul>
+		</p>
+	</section>
+
+	<section id='fcd-comment-resolution-package'>
+		<h3>FCD Ballot Comment Resolution Package</h3>
+		<div class='note'>
+			<p>If a document passes Final Committee Draft ballot with no comments,
+				comment resolution, Pre-DP Review and a Draft Publication Vote are not
+				required. See the Standards Operations Manual for guidance.</p>
+		</div>
+		<p>Incremental Comment Resolution within the Project Group may result in the
+			need for multiple Drafts, Markups, and Comment Resolution Records or
+			Comment Resolution Documents. These document packages shall contain:
+			<ul>
+				<li>A clean version of the draft document. If the ballot passed, this
+					shall be marked as &ldquo;FCD.&ldquo; If the ballot failed, this
+					shall be marked	as &ldquo;CD.&ldquo;</li>
+				<li>A markup from the ballot document should be provided.</li>
+				<li>For a Revision, a markup from the baseline draft should be
+					included.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>A Comment Resolution Record is required. This should be the
+					electronic comment resolution records kept on the SMPTE web site.
+					In some situations the Project Group may wish to keep other records.
+					See the Standards Operations Manual for guidance.</li>
+			</ul>
+		</p>
+		<p> When Comment Resolution has been successfully completed, a Pre-DP Review
+			follows. Comment resolution may include one or more Disposition Votes.
+			See the Standards Operations Manual for guidance.</p>
+	</section>
+
+	<section id='pre-draft-publication-vote-review-document-package'>
+		<h3>Pre-Draft Publication Vote Review Document Package</h3>
+		<p>Following comment resolution, the Project Group shall provide the Technology
+			Committee Chair(s) a Pre-DP review package that contains:
+			<ul>
+				<li>A clean version of the current Final Committee Draft document marked
+				as &ldquo;FCD.&ldquo;
+				<li>A markup from the Final Committee Draft ballot document.</li>
+				<li>For a Revision, a markup from the baseline draft should be included.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>A Comment Resolution Record is required. This should be the
+					electronic comment resolution records kept on the SMPTE web site.
+					In some situations the Project Group may wish to keep other records.
+					See the Standards Operations Manual for guidance.</li>
+			</ul>
+		</p>
+	</section>
+	
+	<section id='draft-publication-vote-review-document-package'>
+		<h3>Draft Publication Vote Review Document Package</h3>
+		<p>Following the Pre-DP Review, the Project Group shall provide the Technology
+			Committee Chair(s) a DP Vote package that contains:
+			<ul>
+				<li>A clean version of the current Final Committee Draft document marked
+				as &ldquo;FCD.&ldquo;
+				<li>If changes were made as a result of the Pre-DP review, markup
+					showing these changes shall be provided.</li>
+				<li>For a Revision, a markup from the baseline draft should be included.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>A Comment Resolution Record is required. This should be the
+					electronic comment resolution records kept on the SMPTE web site.
+					In some situations the Project Group may wish to keep other records.
+					See the Standards Operations Manual for guidance.</li>
+			</ul>
+		<p>After a successful DP vote the Draft Publication Vote Package documents
+			shall not be edited by the Project Group participants or the Technology
+			Committee Chair(s) with the exception of changing the document status. If
+			new editorial issues are found, these should be documented and given to
+			SMPTE HQ (see <a href="#smpte-hq-editing-publication-document-package"></a>.)</p>
+	</section>
+
+	<section id='st-audit-document-package'>
+		<h3>ST Audit Document Package</h3>
+		<p> This document package is the responsibility of the Technology Committee
+			Chair(s) and shall contain:
+			<ul>
+				<li>A clean version of the document marked as &ldquo;DP.&ldquo;
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>A Comment Resolution Record is required. This should be the
+					electronic comment resolution records kept on the SMPTE web site.
+					In some situations the Project Group may wish to keep other records.
+					See the Standards Operations Manual for guidance.</li>
+			</ul>
+		</p>
+	</section>
+	
+	<section id='smpte-hq-editing-publication-document-package'>
+		<h3>SMPTE HQ Editing Publication Document Package</h3>
+		<p> The Technology Committee Chair(s) shall provide a document package to SMPTE
+			HQ that includes:
+			<ul>
+				<li>A clean master copy.</li>
+				<li>If the document has one or more Element(s), the Element(s) or
+					instructions for acquiring the Element(s) shall be included.</li>
+				<li>Any original artwork, figures, drawings or similar material that
+					will be needed to prepare the document and its elements for
+					publication and long-term maintenance. These documents shall be in
+					the formats described in <a href="#publication-format-and-elements"></a>
+					of this Administrative Guideline.</li>
+				<li>A document with notes about any editorial issues discovered after
+					the Draft Publication Vote documents are distributed may be
+					included.</li>
+			</ul>
+		</p>
+		<div class='note'>
+			<p>After each document achieves a successful ST Audit, SMPTE staff
+				will prepare it for publication. The Technology Committee Chairs(s),
+				Project Group Chairs(s) and Document Editor(s) who are responsible for
+				the document are expected to review and approve it before publication.</p>
+		</div>
+  	</section>
+  </section>
+
+  <section class='informative' id='registered-disclosure-documents'>
+	<h2>Registered Disclosure Documents</h2>
+	<p>Registered Disclosure Documents (RDDs) are not Engineering Documents. The
+		RDD approval process includes a Technology Committee Ballot, Comment
+		Resolution and an ST Audit.</p>
+
+	<p>Using the content and form of the appropriate Engineering Document packages
+		is recommended.<p>
+  </section>
+
+</body>
+</html>
